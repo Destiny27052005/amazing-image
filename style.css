@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #0000ff;
+    --light-blue: #3f48ef;
+    --white: #fff;
+    --small-font: 1rem;
+    --semi-font: 2rem;
+    --mb-1: 1rem;
+    --mb-2: 1.5rem;
+    --mb-3: 2rem;
+    --mb-4: 2.5rem;
+    --mb-5: 3rem;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    width: 24px;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--blue);
+    font-size: var(--semi-font);
+    margin-bottom: var(--mb-1);
+    font-weight: 900;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: var(--mb-4);
+}
+
+form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 5px 8px rgba(129, 127, 127, 0.256);
+    transition: all 0.5s;
+}
+
+form:hover {
+    box-shadow: 0 5px 5px rgba(129, 127, 127, 0.337);
+}
+
+button {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--light-blue);
+    padding: 5px 20px;
+    border-radius: 12px;
+    border: none;
+}
+
+input {
+    font-size: 25px;
+    width: 60%;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+}
+
+
+.img,
+#imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 350px;
+    height: 400px;
+    border-radius: 18px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+@media (min-width: 700px) {
+    form {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    .img,
+    #imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: var(--mb-1) var(--mb-2);
+    }
+
+}
+
+@media (min-width:1024px) {
+    form {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    .img,
+    #imgs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: var(--mb-1) var(--mb-2);
+    }
+}
