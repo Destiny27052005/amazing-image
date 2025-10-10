@@ -126,7 +126,7 @@ h3 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        padding: var(--mb-1) var(--mb-2);
+        padding: var(--mb-1);
     }
 
 }
@@ -151,4 +151,5 @@ h3 {
         gap: 15px;
         padding: var(--mb-1) var(--mb-2);
     }
+
 }
