@@ -3,6 +3,7 @@ const container = document.querySelector('#imgs')
 const div = document.querySelector(".img");
 const search = document.getElementById("search").value;
 const button = document.querySelector('.click')
+const footer = document.querySelector('footer')
 
 
 form.addEventListener('submit', (e) => {
@@ -20,7 +21,8 @@ async function fetchData() {
             throw new Error('Could not fetch resource')
         }
         const data = await response.json()
-
+        
+        footer.style.display = "none"
         div.style.display = "none"
         const result = data.results
         const image = [...result]
@@ -37,10 +39,12 @@ async function fetchData() {
             link.href = url
             link.target = "_blank"
         }
+        footer.style.display = 'block'
     } catch (error) {
         console.error(error);
     }
 }
+
 
 
 
